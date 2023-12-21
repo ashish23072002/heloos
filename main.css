@@ -1,0 +1,152 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #333; /* Grey background */
+  }
+  .whole {
+    height: 100vh;
+    overflow: hidden;
+    top: 0%;
+  }
+  
+  header {
+    background-color: #e60000; /* Vodafone red */
+    color: #fff;
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items:baseline;
+    
+  }
+  
+  .header-content {
+    display: flex;
+    align-items:first baseline;
+  }
+  
+  .logo {
+    margin-right: 5px;
+    margin-top: 1px;
+  }
+  
+  .lo{
+    margin-bottom: -14px;
+  }
+  
+  .content {
+    margin-left: 320px; /* Adjust the margin to make room for the navigation slider */
+    padding: 1px;
+    box-sizing: border-box;
+    width: 99%;
+    background-color: #333;
+    color: white;
+    height: 100vh;
+  }
+  
+  .cards-container {
+    display:flex;
+    gap: 140px;
+    margin: 40px;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 200px;
+    background-color: rgb(78, 76, 76);
+    color: white;
+    
+   
+  }
+  
+  .card i {
+    font-size: 40px;
+    margin-bottom: 1px;
+  }
+  
+    .sidebar {
+      position: fixed;
+      left: -250px;
+      top: 9.4%;
+      width: 250px;
+      height: 100%;
+      background:rgb(78, 76, 76);
+      transition: all .4s ease;
+    }
+  
+    .sidebar ul a{
+      display: block;
+      height: 100%;
+      width: 100%;
+      line-height: 65px;
+      font-size: 18px;
+      color: white;
+      padding-left: 40px;
+      box-sizing: border-box;
+      border-bottom: 1px solid black;
+      border-top: 1px solid rgba(191, 22, 22, 0.1);
+      transition: .4s;
+    }
+    .sidebar ul {
+      list-style: none; /* Remove the default list styles (bullets/numbers) */
+      padding: 0; /* Remove default padding */
+      margin: 0;
+   }
+   .sidebar ul li a {
+    text-decoration: none; /* Remove underlines from links */
+  }
+   
+   
+    ul li:hover a{
+      padding-left: 50px;
+    }
+    .sidebar ul a i{
+      margin-right: 16px;
+    }
+    #check{
+      display: none;
+    }
+    label #btn,label #cancel{
+      position: absolute;
+      background: #616263;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    label #btn{
+      left: -6px;
+      top: 80px;
+      font-size: 23px;
+      color: white;
+      padding: 5px 11px;
+      transition: all .5s;
+    }
+    label #cancel{
+      z-index: 1111;
+      left: -180px;
+      top: 80px;
+      font-size: 20px;
+      color: #939697;
+      padding: 4px 9px;
+      transition: all .5s;
+    }
+    #check:checked ~ .sidebar{
+      left: 0;
+    }
+    #check:checked ~ label #btn{
+      left: 250px;
+      opacity: 0;
+      pointer-events: none;
+    }
+    #check:checked ~ label #cancel{ 
+      left: 205px;
+    }
+    #check:checked ~ section{
+      margin-left: 250px;
+    }
+    
+  
